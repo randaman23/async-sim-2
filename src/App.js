@@ -8,11 +8,13 @@ import TwoWizard from "./components/TwoWizard";
 import ThreeWizard from "./components/ThreeWizard";
 import FourWizard from "./components/FourWizard";
 import FiveWizard from "./components/FiveWizard";
+import Header from './components/Header'
 
 class App extends Component {
   render() {
     return (
       <div>
+        <Header/>
         <HashRouter>
           <Switch>
             <Route path="/" exact component={Auth}/>
