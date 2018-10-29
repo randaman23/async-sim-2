@@ -10,7 +10,9 @@ export default class OneWizard extends Component {
         <Link to="/dashboard">
           <button>Cancel</button>
         </Link>
+        <h2>Property Name</h2>
         <input type="text" />
+        <h2>Property Description</h2>
         <input type="text" />
         <Link to="/wizard/2">
           <button>Next Step</button>
