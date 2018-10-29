@@ -10,9 +10,9 @@ export default class ThreeWizard extends Component {
         <Link to="/dashboard">
           <button>Cancel</button>
         </Link>
-        <img src="" alt=""/>
+        <img src="" alt="" />
         <h2>Image URL</h2>
-        <input type="text"/>
+        <input type="text" />
         <Link to="/wizard/2">
           <button>Previous Step</button>
         </Link>

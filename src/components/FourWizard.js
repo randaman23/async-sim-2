@@ -20,7 +20,6 @@ export default class FourWizard extends Component {
         <Link to="/wizard/5">
           <button>Next Step</button>
         </Link>
-        
       </div>
     );
   }
