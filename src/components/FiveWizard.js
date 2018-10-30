@@ -6,7 +6,7 @@ export default class FiveWizard extends Component {
     return (
       <div>
         <h1>Add New Listing</h1>
-        <h2>Step 1</h2>
+        <h2>Step 5</h2>
         <Link to="/dashboard">
           <button>Cancel</button>
         </Link>
