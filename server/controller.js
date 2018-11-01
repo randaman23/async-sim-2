@@ -17,5 +17,10 @@ module.exports = {
         console.log(err);
         res.status(500).send(err);
       });
+  },
+  registerUser: (req, res) => {
+    const db = req.app.get("db");
+    const { username, password } = req.body;
+    db.register_user([username, password]).then();
   }
 };

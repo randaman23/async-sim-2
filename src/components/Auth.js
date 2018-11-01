@@ -30,6 +30,11 @@ export default class Auth extends Component {
     });
   };
 
+  handleRegister = () => {
+    const { username, password } = this.state;
+    axios.post(`/api/auth/register`, { username, password }).then();
+  }
+
   render() {
     // console.log(this.state)
     return (
@@ -42,7 +47,7 @@ export default class Auth extends Component {
 
         <button onClick={this.handleLogin}>Login</button>
 
-        <button>Register</button>
+        <button onClick={this.handleRegister}>Register</button>
       </div>
     );
   }
