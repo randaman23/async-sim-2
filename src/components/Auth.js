@@ -21,8 +21,12 @@ export default class Auth extends Component {
   handleLogin = () => {
     const { username, password } = this.state;
     axios.post(`/api/auth/login`, { username, password }).then(res => {
-      console.log(res.data)
-      this.props.history.push(`/dashboard`)
+      console.log(res.data);
+      if (res.status === 404) {
+        alert("Please Register, Good Person");
+      } else {
+        this.props.history.push(`/dashboard`);
+      }
     });
   };
 
