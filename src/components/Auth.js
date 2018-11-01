@@ -20,7 +20,10 @@ export default class Auth extends Component {
 
   handleLogin = () => {
     const { username, password } = this.state;
-    axios.post(`/api/auth/login`, { username, password }).then();
+    axios.post(`/api/auth/login`, { username, password }).then(res => {
+      console.log(res.data)
+      this.props.history.push(`/dashboard`)
+    });
   };
 
   render() {
