@@ -21,6 +21,12 @@ module.exports = {
   registerUser: (req, res) => {
     const db = req.app.get("db");
     const { username, password } = req.body;
-    db.register_user([username, password]).then();
+    db.all_users([username, password]).then(user => {
+      if (username && password) {
+        res.status(200).send(user);
+      } else {
+        db.register_user([username, password]).then();
+      }
+    });
   }
 };
