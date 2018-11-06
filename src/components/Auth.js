@@ -32,7 +32,10 @@ export default class Auth extends Component {
 
   handleRegister = () => {
     const { username, password } = this.state;
-    axios.post(`/api/auth/register`, { username, password }).then();
+    axios.post(`/api/auth/register`, { username, password }).then(res => {
+      this.props.history.push(`/dashboard`)
+      alert('Welcome!')
+    });
   }
 
   render() {
