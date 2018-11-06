@@ -5,7 +5,7 @@ import axios from 'axios'
 export default class Header extends Component{
 
   handleLogout = () => {
-    axios.get(`/api/auth/logout`).then(res => {
+    axios.post(`/api/auth/logout`).then(res => {
       console.log(res.data)
       this.props.history.push(`/`)
     })

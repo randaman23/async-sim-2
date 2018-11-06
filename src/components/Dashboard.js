@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios'
 
 export default class Dashboard extends Component {
+
+
+componentDidMount(){
+  axios.get(`/api/properties`)
+}
+
   render() {
     return (
       <div>
