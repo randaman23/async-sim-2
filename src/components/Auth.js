@@ -33,24 +33,27 @@ export default class Auth extends Component {
   handleRegister = () => {
     const { username, password } = this.state;
     axios.post(`/api/auth/register`, { username, password }).then(res => {
-      this.props.history.push(`/dashboard`)
-      alert('Welcome!')
+      console.log(res.data)
+      this.props.history.push(`/dashboard`);
+      alert(`Welcome!`);
     });
-  }
+  };
 
   render() {
     // console.log(this.state)
     return (
       <div>
-        <h1>Auth</h1>
-        <h2>Username</h2>
-        <input type="text" onChange={this.handleUsername} />
-        <h2>Password</h2>
-        <input type="text" onChange={this.handlePassword} />
+        <div>
+          <h1>Auth</h1>
+          <h2>Username</h2>
+          <input type="text" onChange={this.handleUsername} />
+          <h2>Password</h2>
+          <input type="text" onChange={this.handlePassword} />
 
-        <button onClick={this.handleLogin}>Login</button>
+          <button onClick={this.handleLogin}>Login</button>
 
-        <button onClick={this.handleRegister}>Register</button>
+          <button onClick={this.handleRegister}>Register</button>
+        </div>
       </div>
     );
   }

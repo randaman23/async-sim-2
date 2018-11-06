@@ -28,7 +28,7 @@ module.exports = {
           res.status(200).send(user);
         });
       } else{
-        res.status(409).send(users)
+        res.status(200).send(users)
       }
     });
   }
