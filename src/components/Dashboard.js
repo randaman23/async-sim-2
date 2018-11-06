@@ -2,11 +2,18 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 
-export default class Dashboard extends Component {
-
+class Dashboard extends Component {
+constructor(props){
+  super(props)
+  this.state = {
+    houses: []
+  }
+}
 
 componentDidMount(){
-  axios.get(`/api/properties`)
+  axios.get(`/api/properties`).then(properties => {
+    console.log(properties)
+  })
 }
 
   render() {
@@ -23,3 +30,5 @@ componentDidMount(){
     );
   }
 }
+
+export default Dashboard

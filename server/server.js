@@ -26,7 +26,7 @@ app.post(`/api/auth/register`, ctrl.registerUser)
 app.post('/api/auth/logout', ctrl.logout)
 
 app.post(`/api/properties`)
-app.get(`/api/properties`)
+app.get(`/api/properties`, ctrl.getHouses)
 app.delete(`/api/properties/:id`)
 
 app.listen(SERVER_PORT, () => {
