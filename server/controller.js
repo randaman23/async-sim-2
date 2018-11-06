@@ -31,5 +31,9 @@ module.exports = {
         res.status(200).send(users)
       }
     });
+  },
+  logout: (req, res) => {
+    req.session.destroy()
+    res.status(200).send('Sesh Destroyed')
   }
 };

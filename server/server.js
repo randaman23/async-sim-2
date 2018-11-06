@@ -23,6 +23,7 @@ massive(CONNECTION_STRING).then(db => app.set("db", db));
 
 app.post(`/api/auth/login`, ctrl.authLogin)
 app.post(`/api/auth/register`, ctrl.registerUser)
+app.get('/api/auth/logout', ctrl.logout)
 
 app.listen(SERVER_PORT, () => {
   console.log(`Magic is happen' on port ${SERVER_PORT}`);
