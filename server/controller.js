@@ -6,10 +6,10 @@ module.exports = {
       .then(user => {
         console.log("Hoi", user);
         if (user.length !== 0) {
-          req.session.user = user
-          // req.session.username = username;
-          // req.session.password = password;
-          
+          req.session.user = user;
+          req.session.username = username;
+          req.session.password = password;
+
           res.status(200).send(user);
         } else {
           res.sendStatus(404);
