@@ -13,10 +13,12 @@ constructor(props){
 componentDidMount(){
   axios.get(`/api/properties`).then(properties => {
     console.log(properties)
+    this.setState({houses: properties.data})
   })
 }
 
   render() {
+    console.log(this.state)
     return (
       <div>
         <h1>Dashboard</h1>
