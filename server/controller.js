@@ -44,7 +44,7 @@ module.exports = {
   },
   getHouses: (req, res) => {
     const db = req.app.get("db");
-    db.get_houses([req.session.user])
+    db.get_houses(req.session.user.user_id)
       .then(houses => {
         console.log(houses);
         res.status(200).send(houses);
