@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-export default class OneWizard extends Component {
+class OneWizard extends Component {
+
+
+handleName(){
+ 
+}
+
+handleDescription(){
+
+}
+
   render() {
     return (
       <div>
@@ -11,9 +22,9 @@ export default class OneWizard extends Component {
           <button>Cancel</button>
         </Link>
         <h2>Property Name</h2>
-        <input type="text" />
+        <input onChange={this.handleName} type="text" />
         <h2>Property Description</h2>
-        <input type="text" />
+        <input onChange={this.handleDescription} type="text" />
         <Link to="/wizard/2">
           <button>Next Step</button>
         </Link>
@@ -21,3 +32,5 @@ export default class OneWizard extends Component {
     );
   }
 }
+
+export default connect()(OneWizard);

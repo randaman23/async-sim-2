@@ -1,24 +1,24 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import axios from 'axios'
+import axios from "axios";
 
 class Dashboard extends Component {
-constructor(props){
-  super(props)
-  this.state = {
-    houses: []
+  constructor(props) {
+    super(props);
+    this.state = {
+      houses: []
+    };
   }
-}
 
-componentDidMount(){
-  axios.get(`/api/properties`).then(properties => {
-    console.log(properties)
-    this.setState({houses: properties.data})
-  })
-}
+  componentDidMount() {
+    axios.get(`/api/properties`).then(properties => {
+      console.log(properties);
+      this.setState({ houses: properties.data });
+    });
+  }
 
   render() {
-    console.log(this.state)
+    console.log(this.state);
     return (
       <div>
         <h1>Dashboard</h1>
@@ -33,4 +33,4 @@ componentDidMount(){
   }
 }
 
-export default Dashboard
+export default Dashboard;
