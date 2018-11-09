@@ -3,15 +3,9 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 class OneWizard extends Component {
+  handleName() {}
 
-
-handleName(){
- 
-}
-
-handleDescription(){
-
-}
+  handleDescription() {}
 
   render() {
     return (
@@ -32,5 +26,9 @@ handleDescription(){
     );
   }
 }
+function mapStateToProps(state) {}
 
-export default connect()(OneWizard);
+export default connect(
+  mapStateToProps,
+  {}
+)(OneWizard);

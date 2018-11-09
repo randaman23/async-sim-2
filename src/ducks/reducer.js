@@ -1,5 +1,5 @@
 const initialState = {
-   houses: []
+   properties: {}
 }
 
 const ADD_NAME_DESCRIPTION = 'ADD_NAME_DESCRIPTION'
