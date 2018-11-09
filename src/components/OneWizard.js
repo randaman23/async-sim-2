@@ -26,7 +26,9 @@ class OneWizard extends Component {
     );
   }
 }
-function mapStateToProps(state) {}
+function mapStateToProps(state) {
+  return { properties: state.properties };
+}
 
 export default connect(
   mapStateToProps,
