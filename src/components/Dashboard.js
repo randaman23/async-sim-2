@@ -19,6 +19,32 @@ class Dashboard extends Component {
 
   render() {
     console.log(this.state);
+    let properties = this.state.houses.map((e, i) => {
+      return (
+        <div key={i} value={e}>
+          {e.image}
+          <br />
+          {e.property_name}
+          <br />
+          {e.description}
+          <br />
+          {e.loan_amount}
+          <br />
+          {e.monthly_mortgage}
+          <br />
+          {e.desired_rent}
+          <br />
+          {e.address}
+          <br />
+          {e.city}
+          <br />
+          {e.state}
+          <br />
+          {e.zip}
+          <hr/>
+        </div>
+      );
+    });
     return (
       <div>
         <h1>Dashboard</h1>
@@ -28,6 +54,7 @@ class Dashboard extends Component {
         <input type="text" />
         <button>Filter</button>
         <button>Reset</button>
+        {properties}
       </div>
     );
   }
